@@ -47,4 +47,13 @@ Title Page
 
 \maketitle
 
+\section{Laboratory Experimental Results}
+
+For this first lab the group of students were given a simple MG995 servo motor and instructed to make the servo function using PWM. After looking through the MG995 data-sheet and wiring the motor accordingly, the students were able to get the motor to turn with the percentage duty cycle. Using one of the analog devices first, making the duty cycle bigger and smaller would turn the motor a specific amount in a specific direction (clockwise or counter-clockwise). \\
+\indent Next the students wired the servo motor to the included analog discovery in the lab. Using the Waveforms software, a PWM function was generated and sent to the servo. In real-time, the students could then change the duty cycle percentage again and turn the motor.
+
+\section{Discussion}
+
+Throughout the lab the group of students constantly brought the same question to mind: Why is the MG995 exhibiting the behavior that the students are seeing whilst changing the duty cycle percentage? For the students it seemed that only a duty cycle change within the 0\% to 20\% range would make a difference in the servo functionality.
+
 \end{document}
