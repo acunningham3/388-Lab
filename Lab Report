@@ -61,6 +61,41 @@ Title Page
 
 \paragraph{To fully understand all aspects of the lab, it is necessary to provide background information on the servo motor that was used, as well as to explain what PWM is. The servo motor used in the lab was the MG995 by TowerPro. At 55 grams, this lightweight, 40.7×19.7×42.9mm motor only requires 4.8 to 6.6 volts to operate. The servo motor has three wires branching off of it, each with a different color indicating its purpose. Brown corresponds to the ground, red corresponds to voltage, and orange corresponds to the PWM. \\ \indent PWM stands for Pulse Width Modulation, and is a method for generating an analog signal using a digital source. A PWM has two components, including a frequency and a duty cycle.  The duty cycle describes the amount of time that the signal is in a high state as a percentage of the total time it takes to complete one period, while the frequency tells how fast the PWM completes a cycle, thus how fast it switches between high and low states. For the servo motor, the duty cycle is 20 percent, and the frequency is 50 Hz. Using this knowledge, completion of the lab was possible. } 
 
+\section{Methods}
+\paragraph{This lab consisted of making a servo motor move through the use of pulse width modulation. This was done in two different ways, first by using a DC power supply and the function generator and then by using Waveforms and the logic analyzer.}
+
+\subsection{Dc Power Supply and Function Generator}
+\paragraph{The MG995 servo motor consists of 3 wires and they were connected to the DC power supply and the function generator as follows:} 
+
+\begin{itemize}
+\item red wire: to +5.5 volts from the dc power supply
+\item brown wire: to ground
+\item orange wire: to pulse width modulation from the function generator 
+\end{itemize}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[height=150, width=.3\textwidth]{name/PowerSupply.png}
+    \includegraphics[height=150, width=.3\textwidth]{name/FunctionGenerator.png}
+    \includegraphics[height=150, width=.3\textwidth]{name/BreadBoard.png}
+    \caption{DC Power Supply, Function Generator, BreadBoard}
+    \label{fig:my_label}
+\end{figure}
+
+
+
+\paragraph{Once the MG995 servo motor was connected, the function generator was then adjusted in order to make the servo motor move. This was done by selecting duty cycle on the function generator and then spinning the dial clockwise to increase the percentage or counter-clockwise to decrease the percentage. When the duty cycle of the pulse wave was increased, the servo motor spun clockwise. When the duty cycle was decreased, the servo motor spun counter-clockwise.}
+
+
+
+\subsection{Waveforms and Logic Analyzer}
+\paragraph{The DC power source and the function generator were disconnected from the servo motor. The Waveforms program was loaded on the computer and the logic analyzer was connected to the servo motor as follows:}
+\begin{itemize}
+\item red wire: +5.5 volts
+\item brown wire: to ground
+\item orange wire: to DIO 0 of the logic analyzer which was configured to produce a pulse wave
+\end{itemize}
+\paragraph{Once the  servo motor was connected to the logic analyzer, Waveforms was used to adjust the duty cycle of the pulse wave. This was done by selecting duty cycle and typing in the percent that was desired. If the duty cycle increased, the servo motor would spin clockwise and if it was decreased, the servo motor would spin counter-clockwise.}
+
 \section{Laboratory Experimental Results}
 
 For this first lab the group of students were given a simple MG995 servo motor and were instructed to make the servo function using PWM. After looking through the MG995 data-sheet and wiring the motor accordingly, the students were able to get the motor to turn corresponding to the percentage duty cycle the servo was given. Using one of the analog devices, making the duty cycle bigger and smaller would turn the motor a specific amount in a specific direction (clockwise or counter-clockwise). \\
