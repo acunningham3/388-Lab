@@ -50,6 +50,9 @@ Title Page
 \clearpage
 \pagenumbering{arabic}
 
+\tableofcontents
+\newpage
+
 \centerline{\large \textbf{Abstract}}
 
 \paragraph{\indent The purpose of the lab was to introduce GitHub and to }
