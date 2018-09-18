@@ -66,7 +66,8 @@ Title Page
 For this first lab the group of students were given a simple MG995 servo motor and were instructed to make the servo function using PWM. After looking through the MG995 data-sheet and wiring the motor accordingly, the students were able to get the motor to turn corresponding to the percentage duty cycle the servo was given. Using one of the analog devices, making the duty cycle bigger and smaller would turn the motor a specific amount in a specific direction (clockwise or counter-clockwise). \\
 \indent Next the students wired the servo motor to the included Analog Discovery in the lab. Using the Waveforms software, a PWM function was generated and sent to the servo. In real-time, the students could then change the duty cycle percentage again and turn the motor. Through the use of an equation, 1.0 + servo angle / 180.0, the MG995 can be turned exactly as far as the students would like to turn it. Variables for angle and pulsewidth are included in this equation. Using the equation a table can be generated to show the exact angles and values for the MG995.
 
-\begin{center}
+\begin{table}[h!]
+\centering
  \begin{tabular}{||c c c||} 
  \hline
  Angle (Degrees) & Pulsewidth (ms) & Percentage Duty Cycle \\ [0.5ex] 
@@ -82,7 +83,9 @@ For this first lab the group of students were given a simple MG995 servo motor a
  180 & 2.0 & 10 \\ [1ex] 
  \hline
 \end{tabular}
-\end{center}
+\caption{MG995 Angle Values}
+\label{table:1}
+\end{table}
 
 \section{Discussion}
 
