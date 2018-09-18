@@ -51,6 +51,8 @@ Title Page
 \pagenumbering{arabic}
 
 \tableofcontents
+\listoffigures
+\listoftables
 \newpage
 
 \centerline{\large \textbf{Abstract}}
