@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
+\usepackage{graphicx}
 
 \iffalse
 Title Page
@@ -23,17 +24,17 @@ Title Page
     \linebreak
     \linebreak}
 
-\author{Adam Cunningham \\
+\author{Adam Cunningham (acunningham3)\\
         \\
         \\
         \\
         \\
-        James McCarthy \\
+        James McCarthy (jimdog10)\\
         \\
         \\
         \\
         \\
-        Ryan McCarthy \\
+        Ryan McCarthy (rmccarthy3)\\
         \\
         \\
         \\
@@ -46,5 +47,95 @@ Title Page
 \begin{document}
 
 \maketitle
+\thispagestyle{empty}
+\clearpage
+\pagenumbering{arabic}
+
+\tableofcontents
+\listoffigures
+\listoftables
+\newpage
+
+\centerline{\large \textbf{Abstract}}
+
+\paragraph{\indent The purpose of the lab was to introduce github and the LATEX markup language, as well as to strengthen laboratory practical skills. These skills included use of the function generator to send a pulse wave to the MG995 servo motor to make it move. }
+
+\section{Introduction}
+
+\paragraph{To fully understand all aspects of the lab, it is necessary to provide background information on the servo motor that was used, as well as to explain what PWM is. The servo motor used in the lab was the MG995 by TowerPro. At 55 grams, this lightweight, 40.7×19.7×42.9mm motor only requires 4.8 to 6.6 volts to operate. The servo motor has three wires branching off of it, each with a different color indicating its purpose. Brown corresponds to the ground, red corresponds to voltage, and orange corresponds to the PWM. \\ \indent PWM stands for Pulse Width Modulation, and is a method for generating an analog signal using a digital source. A PWM has two components, including a frequency and a duty cycle.  The duty cycle describes the amount of time that the signal is in a high state as a percentage of the total time it takes to complete one period, while the frequency tells how fast the PWM completes a cycle, thus how fast it switches between high and low states. For the servo motor, the duty cycle is 20 percent, and the frequency is 50 Hz. Using this knowledge, completion of the lab was possible. } 
+
+\section{Methods}
+\paragraph{This lab consisted of making a servo motor move through the use of pulse width modulation. This was done in two different ways, first by using a DC power supply and the function generator and then by using Waveforms and the logic analyzer.}
+
+\subsection{Dc Power Supply and Function Generator}
+\paragraph{The MG995 servo motor consists of 3 wires and they were connected to the DC power supply and the function generator as follows:} 
+
+\begin{itemize}
+\item red wire: to +5.5 volts from the dc power supply
+\item brown wire: to ground
+\item orange wire: to pulse width modulation from the function generator 
+\end{itemize}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[height=150, width=.3\textwidth]{name/PowerSupply.png}
+    \includegraphics[height=150, width=.3\textwidth]{name/FunctionGenerator.png}
+    \includegraphics[height=150, width=.3\textwidth]{name/BreadBoard.png}
+    \caption{DC Power Supply, Function Generator, BreadBoard}
+    \label{fig:my_label}
+\end{figure}
+
+
+
+\paragraph{Once the MG995 servo motor was connected, the function generator was then adjusted in order to make the servo motor move. This was done by selecting duty cycle on the function generator and then spinning the dial clockwise to increase the percentage or counter-clockwise to decrease the percentage. When the duty cycle of the pulse wave was increased, the servo motor spun clockwise. When the duty cycle was decreased, the servo motor spun counter-clockwise.}
+
+
+
+\subsection{Waveforms and Logic Analyzer}
+\paragraph{The DC power source and the function generator were disconnected from the servo motor. The Waveforms program was loaded on the computer and the logic analyzer was connected to the servo motor as follows:}
+\begin{itemize}
+\item red wire: +5.5 volts
+\item brown wire: to ground
+\item orange wire: to DIO 0 of the logic analyzer which was configured to produce a pulse wave
+\end{itemize}
+\paragraph{Once the  servo motor was connected to the logic analyzer, Waveforms was used to adjust the duty cycle of the pulse wave. This was done by selecting duty cycle and typing in the percent that was desired. If the duty cycle increased, the servo motor would spin clockwise and if it was decreased, the servo motor would spin counter-clockwise.}
+
+\section{Laboratory Experimental Results}
+
+For this first lab the group of students were given a simple MG995 servo motor and were instructed to make the servo function using PWM. After looking through the MG995 data-sheet and wiring the motor accordingly, the students were able to get the motor to turn corresponding to the percentage duty cycle the servo was given. Using one of the analog devices, making the duty cycle bigger and smaller would turn the motor a specific amount in a specific direction (clockwise or counter-clockwise). \\
+\indent Next the students wired the servo motor to the included Analog Discovery in the lab. Using the Waveforms software, a PWM function was generated and sent to the servo. In real-time, the students could then change the duty cycle percentage again and turn the motor. Through the use of an equation, 1.0 + servo angle / 180.0, the MG995 can be turned exactly as far as the students would like to turn it. Variables for angle and pulsewidth are included in this equation. Using the equation a table can be generated to show the exact angles and values for the MG995.
+
+\begin{table}[h!]
+\centering
+ \begin{tabular}{||c c c||} 
+ \hline
+ Angle (Degrees) & Pulsewidth (ms) & Percentage Duty Cycle \\ [0.5ex] 
+ \hline\hline
+ 0 & 1.0 & 5 \\ 
+ \hline
+ 45 & 1.25 & 6.25 \\
+ \hline
+ 90 & 1.5 & 7.5 \\
+ \hline
+ 135 & 1.75 & 8.75 \\
+ \hline
+ 180 & 2.0 & 10 \\ [1ex] 
+ \hline
+\end{tabular}
+\caption{MG995 Angle Values}
+\label{table:1}
+\end{table}
+
+\section{Discussion}
+
+Throughout the lab the group of students constantly brought the same question to mind: Why is the MG995 exhibiting the behavior that the students are seeing whilst changing the duty cycle percentage? For the students it seemed that only a duty cycle change within the 0\% to 20\% range would make a difference in the servo functionality. Upon further research an equation was found that would help to build a table of exact values that will turn the servo in a precise way. With this new found in formation, the servo could then be spun at exact degrees with specifically inputted duty cycles.
+
+\section{Conclusions}
+
+In this lab, the group of students were able to build a better understanding of the analog equipment within in the lab work space, as well as test the functions of a servo motor. The students were able to figure out the functionality of the lab power supply and function generator, as well as the oscilloscope. These devices are all essential equipment for any engineering student. \\
+\indent The function generator and power supply were able to supply the essential inputs to the MG995 to help it function. Once at this point, setting the duty cycle percentage on the  function generator gave the students desirable results.
+
+\section{Laboratory Reflection}
+
+Prior to this lab none of us had any experience with using the analog equipment. From our studies in ECE-260 and ECE-263 we were introduced to the Analog Discovery 2. This powerful device made the lab equipment obsolete in our eyes, thus we never had the chance of using the technology. Fortunately, after a few tutorials online and some trial and error, we were able to put our prejudice aside and use the equipment to work the servo motor. Of course, we first tried to use the analog discovery to get the MG995 to turn, but our efforts returned no favorable results. Thus, we moved over to the analog equipment and were able to prosper accordingly. We did, however, figure out the use of the Waveforms software to drive the servo.
 
 \end{document}
