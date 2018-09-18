@@ -2,7 +2,7 @@
 Lab Description:
   Using a function generator, control a servo with PWM
 
-Group Members:\n
+Group Members:
   Adam Cunningham,
   Ryan McCarthy,
   James McCarthy
