@@ -50,6 +50,14 @@ Title Page
 \clearpage
 \pagenumbering{arabic}
 
+\centerline{\large \textbf{Abstract}}
+
+\paragraph{\indent The purpose of the lab was to introduce GitHub and to }
+
+\section{Introduction}
+
+\paragraph{To fully understand all aspects of the lab, it is necessary to provide background information on the servo motor that was used, as well as to explain what PWM is. The servo motor used in the lab was the MG995 by TowerPro. At 55 grams, this lightweight, 40.7×19.7×42.9mm motor only requires 4.8 to 6.6 volts to operate. The servo motor has three wires branching off of it, each with a different color indicating its purpose. Brown corresponds to the ground, red corresponds to voltage, and orange corresponds to the PWM. \\ \indent PWM stands for Pulse Width Modulation, and is a method for generating an analog signal using a digital source. A PWM has two components, including a frequency and a duty cycle.  The duty cycle describes the amount of time the signal is in a high state as a percentage of the total time of it takes to complete one period while the frequency tells how fast the PWM completes a cycle, thus how fast it switches between high and low states. For the servo motor, the duty cycle was 20 percent, while the frequency is 50 Hz. Using this knowledge, completion of the lab was possible. } 
+
 \section{Laboratory Experimental Results}
 
 For this first lab the group of students were given a simple MG995 servo motor and instructed to make the servo function using PWM. After looking through the MG995 data-sheet and wiring the motor accordingly, the students were able to get the motor to turn with the percentage duty cycle. Using one of the analog devices first, making the duty cycle bigger and smaller would turn the motor a specific amount in a specific direction (clockwise or counter-clockwise). \\
