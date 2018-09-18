@@ -56,4 +56,9 @@ For this first lab the group of students were given a simple MG995 servo motor a
 
 Throughout the lab the group of students constantly brought the same question to mind: Why is the MG995 exhibiting the behavior that the students are seeing whilst changing the duty cycle percentage? For the students it seemed that only a duty cycle change within the 0\% to 20\% range would make a difference in the servo functionality.
 
+\section{Conclusions}
+
+In this lab the group of students were able to build a better understanding of the analog equipment within in the lab, as well as the functions of a servo motor. The students were able to figure out the functionality of the lab power supply and function generator, as well as the oscilloscope, all essential equipment for any engineering student. \\
+\indent The function generator and power supply were able to supply the essential inputs to the MG995 to help it function. Once at this point, setting the duty cycle percentage on the  function generator gave the students desirable results.
+
 \end{document}
