@@ -46,6 +46,9 @@ Title Page
 \begin{document}
 
 \maketitle
+\thispagestyle{empty}
+\clearpage
+\pagenumbering{arabic}
 
 \section{Laboratory Experimental Results}
 
