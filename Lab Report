@@ -1,0 +1,50 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\iffalse
+Title Page
+\fi
+
+\title{%
+    ECE 388: Embedded System Design Project \\
+    \large Lab 1: Servo Motor
+    \linebreak
+    \linebreak
+    \linebreak
+    \linebreak
+    \linebreak
+    \linebreak
+    \linebreak
+    \linebreak
+    \large We certify that this work is original and not a product of anyone's work but our own
+    \linebreak
+    \linebreak
+    \linebreak
+    \linebreak
+    \linebreak}
+
+\author{Adam Cunningham \\
+        \\
+        \\
+        \\
+        \\
+        James McCarthy \\
+        \\
+        \\
+        \\
+        \\
+        Ryan McCarthy \\
+        \\
+        \\
+        \\
+        \\
+        \\}
+
+\date{Due: September 19, 2018 \\
+      Submitted: September 19, 2018}
+
+\begin{document}
+
+\maketitle
+
+\end{document}
