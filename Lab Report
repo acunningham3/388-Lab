@@ -63,20 +63,38 @@ Title Page
 
 \section{Laboratory Experimental Results}
 
-For this first lab the group of students were given a simple MG995 servo motor and instructed to make the servo function using PWM. After looking through the MG995 data-sheet and wiring the motor accordingly, the students were able to get the motor to turn with the percentage duty cycle. Using one of the analog devices first, making the duty cycle bigger and smaller would turn the motor a specific amount in a specific direction (clockwise or counter-clockwise). \\
-\indent Next the students wired the servo motor to the included analog discovery in the lab. Using the Waveforms software, a PWM function was generated and sent to the servo. In real-time, the students could then change the duty cycle percentage again and turn the motor.
+For this first lab the group of students were given a simple MG995 servo motor and were instructed to make the servo function using PWM. After looking through the MG995 data-sheet and wiring the motor accordingly, the students were able to get the motor to turn corresponding to the percentage duty cycle the servo was given. Using one of the analog devices, making the duty cycle bigger and smaller would turn the motor a specific amount in a specific direction (clockwise or counter-clockwise). \\
+\indent Next the students wired the servo motor to the included Analog Discovery in the lab. Using the Waveforms software, a PWM function was generated and sent to the servo. In real-time, the students could then change the duty cycle percentage again and turn the motor. Through the use of an equation, 1.0 + servo angle / 180.0, the MG995 can be turned exactly as far as the students would like to turn it. Variables for angle and pulsewidth are included in this equation. Using the equation a table can be generated to show the exact angles and values for the MG995.
+
+\begin{center}
+ \begin{tabular}{||c c c||} 
+ \hline
+ Angle (Degrees) & Pulsewidth (ms) & Percentage Duty Cycle \\ [0.5ex] 
+ \hline\hline
+ 0 & 1.0 & 5 \\ 
+ \hline
+ 45 & 1.25 & 6.25 \\
+ \hline
+ 90 & 1.5 & 7.5 \\
+ \hline
+ 135 & 1.75 & 8.75 \\
+ \hline
+ 180 & 2.0 & 10 \\ [1ex] 
+ \hline
+\end{tabular}
+\end{center}
 
 \section{Discussion}
 
-Throughout the lab the group of students constantly brought the same question to mind: Why is the MG995 exhibiting the behavior that the students are seeing whilst changing the duty cycle percentage? For the students it seemed that only a duty cycle change within the 0\% to 20\% range would make a difference in the servo functionality.
+Throughout the lab the group of students constantly brought the same question to mind: Why is the MG995 exhibiting the behavior that the students are seeing whilst changing the duty cycle percentage? For the students it seemed that only a duty cycle change within the 0\% to 20\% range would make a difference in the servo functionality. Upon further research an equation was found that would help to build a table of exact values that will turn the servo in a precise way. With this new found in formation, the servo could then be spun at exact degrees with specifically inputted duty cycles.
 
 \section{Conclusions}
 
-In this lab the group of students were able to build a better understanding of the analog equipment within in the lab, as well as the functions of a servo motor. The students were able to figure out the functionality of the lab power supply and function generator, as well as the oscilloscope, all essential equipment for any engineering student. \\
+In this lab, the group of students were able to build a better understanding of the analog equipment within in the lab work space, as well as test the functions of a servo motor. The students were able to figure out the functionality of the lab power supply and function generator, as well as the oscilloscope. These devices are all essential equipment for any engineering student. \\
 \indent The function generator and power supply were able to supply the essential inputs to the MG995 to help it function. Once at this point, setting the duty cycle percentage on the  function generator gave the students desirable results.
 
 \section{Laboratory Reflection}
 
-Prior to this lab none of us had any experience with using the analog equipment. From our studies in ECE-260 and ECE-263 we were introduced to the Analog Discovery 2. This powerful device made the lab equipment obsolete in our eyes, thus we never had the chance of using the technology. Fortunately, after a few tutorials online and some trial and error, we were able to put our prejudice aside and use the equipment to work the servo motor. Our course, we first tried to use the analog discovery to get the MG995 to turn, but our efforts returned no favorable results. Thus, we moved over to the analog equipment and were able to prosper accordingly. We did, however, figure out the use of the Waveforms software to drive the servo.
+Prior to this lab none of us had any experience with using the analog equipment. From our studies in ECE-260 and ECE-263 we were introduced to the Analog Discovery 2. This powerful device made the lab equipment obsolete in our eyes, thus we never had the chance of using the technology. Fortunately, after a few tutorials online and some trial and error, we were able to put our prejudice aside and use the equipment to work the servo motor. Of course, we first tried to use the analog discovery to get the MG995 to turn, but our efforts returned no favorable results. Thus, we moved over to the analog equipment and were able to prosper accordingly. We did, however, figure out the use of the Waveforms software to drive the servo.
 
 \end{document}
