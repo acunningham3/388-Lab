@@ -168,4 +168,25 @@ Appropriately document any textual research, fieldwork, and primary sources (int
     
 \end{figure}
 
+\newpage
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[height=280, width=400]{Float-Switch-1.jpg}
+    \caption{Float Switch Hardwire Testing (Open)}
+    \label{fig:my_label}
+    
+    \includegraphics[height=280, width=400]{Float-Switch-2.jpg}
+    \caption{Float Switch Hardwire Testing (Closed)}
+    \label{fig:my_label}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{Photoresistor.jpg}
+    \caption{Photoresistor Hardwire Testing}
+    \label{fig:my_label}
+\end{figure}
+
+
 \end{document}
