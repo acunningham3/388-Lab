@@ -76,7 +76,7 @@ The float switch was tested using the following components:}
 \textbf{System 1 Test Procedure:}
 The test was performed by first connecting each of the two copper wires from the float switch to two separate wires. This was done because the copper wires could not fit into the bread board on their own. Next, 5 volts was supplied from the Arduino Uno and connected to one of the wires from the float switch. Then, the other wire from the float switch was connected to a 2k Ohm resistor. The resistor was then connected to the positive terminal of the LED and the negative terminal was connected to ground. Once the circuit was completed, the float switch was closed and the LED lit up. Next the LED was closed and the LED turned off. \\
 \\
-\textbf{System 2 Under Test:} The second system under test was constructed in order confirm that the photoresistor worked properly. The photoresistor will be used to monitor the amount of sunlight inside of the green house. When light is present, the resistor has a lower resistance and as the light decreases, the resistance increases. The the voltage will change as a result of the resistance increasing or decreasing  due to Ohms's Law and the micro-controller will monitor these changes and enable LEDS when there isn't enough sunlight present. The following test was orchestrated in order to ensure that the photoresistor was functioning properly. (See appendix for pictures of the test conducted)\\
+\noindent\textbf{System 2 Under Test:} \\The second system under test was constructed in order confirm that the photoresistor worked properly. The photoresistor will be used to monitor the amount of sunlight inside of the green house. When light is present, the resistor has a lower resistance and as the light decreases, the resistance increases. The the voltage will change as a result of the resistance increasing or decreasing  due to Ohms's Law and the micro-controller will monitor these changes and enable LEDS when there isn't enough sunlight present. The following test was orchestrated in order to ensure that the photoresistor was functioning properly. (See appendix for pictures of the test conducted)\\
 
 
 \noindent{\textbf{System 2 Test Setup: }} The photoresistor was tested using the following components:
@@ -88,7 +88,7 @@ The test was performed by first connecting each of the two copper wires from the
 \item 2 Wires
 \end{itemize}
 
-\textbf{System 2 Test Procedure:} The test was performed by first connecting 5 volts from the Arduino Uno to the photoresistor. Next, the photoresistor was connected to the positive terminal of the LED. The negative terminal of the LED was then connected to ground. Once the circuit was completed, a finger was used to cover the top of the photoresistor. When this happened, the LED dimmed because the resistance increased. Next the photoresitor was uncovered and the birghtness of the LED increased. (See appendix for pictures of the test conducted)
+\noindent\textbf{System 2 Test Procedure:} \\ The test was performed by first connecting 5 volts from the Arduino Uno to the photoresistor. Next, the photoresistor was connected to the positive terminal of the LED. The negative terminal of the LED was then connected to ground. Once the circuit was completed, a finger was used to cover the top of the photoresistor. When this happened, the LED dimmed because the resistance increased. Next the photoresitor was uncovered and the birghtness of the LED increased. (See appendix for pictures of the test conducted)
 \noindent{\textbf{System 3 Test Setup:} \\
 This next testing session tests the reliability and integrity of the supplied humidity and temperature sensor. The given sensor, or the DHT22, has the ability to detect the percentage of humidity and the temperature of the air around it. This test is to ensure that the implementation created in the Arduino IDE works correctly and creates logically outputs. As well as to test the functionality of the device.\\
 
@@ -164,6 +164,8 @@ We have plans to purchase an LED strip that is compatible with Arduino to use fo
 [1] Digitial-Output Relative Humidity and Temperature Sensor/Module AM2303. (n.d.). [ebook] Aosong Electronics Co. Ltd, pp.1-2. Available at:\\ https://www.electroschematics.com/11293/am2302-dht22-datasheet/ [Accessed 3    Oct. 2018]. \\
 
 \noindent[2] RSF80 Series. (2016). [ebook] Cynergy3. Available at:\\ https://www.cynergy3.com/sites/default/files/RSF80\%202016.pdf [Accessed 26 Sep. 2018].
+
+\newpage
 
 % Appendices
 \section{Appendices}
