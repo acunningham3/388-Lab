@@ -152,10 +152,6 @@ The first image depicting the work completed thus far can be found in the append
 \section{Conclusion}
 The purpose of this prototyping and testing stage are to gather the components needed to start creating a working model that will perform as intended. Through this lab and the device testing throughout, the students have gathered enough information to prove that each device is working and performs in a nominal fashion. Overall, the humidity and temperature sensor (DHT22), the photoresistor, and the the float switch (RSF38Y) work correctly. The soil moisture sensor will be tested for functionality in the very near future.
 
-% Recommendations
-\section{Recommendations}
-This section is for any recommendations, including how to improve performance if redesigning the product.  State what actions should be taken based on the results of the study. As well as anything that could be done better in the lab.
-
 % Laboratory reflection
 \section{Laboratory reflection}
 Although to us, each of these device seemed complex, (especially the ones we have never seen or used before), implementation was rather simple once we searched through each of the data sheets. Unfortunately, we were not able to conduct testing on the VH400 Soil Moisture Sensor, but we plan to in the near future. Once that is done we will then begin implementing each of the devices together and get a working system created. The main aspect in this lab report that slumped our performance was our time management. We should have sectioned off when each of the components should have been testing and should have had a better schedule overall.
