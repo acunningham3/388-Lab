@@ -53,15 +53,13 @@
 %Abstract formatting
 \setlength{\parindent}{0.5in}
 \linespread{1.25}\selectfont\normalsize\noindent
-\tab The Abstract should be indented an additional half an inch on both sides of the paragraph from the margins, and should be at the top of the first page after the table on contents, and before the introduction. 
-
-The abstract is typically one paragraph (200- words) that summarizes the purpose of the report, the methods employed, the key findings, and the significance or major conclusions. This section should include concise statements and contain specific information. 
+\tab The automated greenhouse plant management system is an embedded system utilized by consumers to ensure the well-being and development of all plants in a greenhouse without any  oversight or labor  required. There are many aspects to consider while creating this product, and it is important to layout its overall functions.
+\tab This report summarizes how the product operates, along with providing all work completed thus far and how it was partitioned among group members. Future plans for the project have been included in an attempt to dictate the direction in which it is going.The equipment testing has been documented, as well as the prototyping and test plans.
 \end{abstract}
 
 % Introduction
 \section{Introduction}
-The introduction should include the purpose (what was tested), problem (why was the experiment conducted), and scope (what was analyzed) of the report. In addition, introductions can sometimes include justification of the experiment’s importance. It can also refer to relevant theory and important previous studies. The goal is to supply sufficient background for readers to understand and evaluate the experiment and its results without having to read previous publications.
-
+The automated greenhouse plant management system will be able to acquire a multitude of inputs from the surrounding environment and respond to them with the correct course of action in a timely manner. To fully understand the extent as to how the product should function, it is important to provide details as to how the average greenhouse works to properly shelter plants for successful growth and development. When the temperature in a greenhouse gets too high for the plants, typically a window is opened to cool the room down. For the automated greenhouse system, an exhaust fan will be implemented to go off when the temperature is sensed to be too high or humid. On the contrary, when the temperature is sensed to be too cold, a heat system must be implemented in a greenhouse to prevent the plants from getting frigid. For the product, a heater will be placed on the wall of the greenhouse that will be activated when temperature is sensed to be too cold. Furthermore, lighting is an essential part to plant life in a greenhouse environment. Without proper lighting, plants will wither up and perish. This product will function by providing light to the plants the same way many large-scale real life greenhouses do: through use of LEDs. When it is sensed that it is too dark in the greenhouse, the product will turn on an LED strip that will be located along the ceiling of the greenhouse. This of course will include cloudy days when there is not enough sun, as well as when it is night time and dark outside. Another important aspect to counter in is whether or not a plant has enough water it its soil. In a typical greenhouse, many gardeners will just manually water the plants. With the product, however, user labor is not required, so there must be an irrigation system implemented This will consist of soil moister sensors for the plants under test, where when moisture is sensed to be too low, a pump is used to send water directly into the plant's pot. Once the sensor indicates that a sufficient moisture level has been met, the pump will cease all water movement. The use of an irrigation system of course requires a water source, which must also be monitored. This will be done with use of a float switch. When the water is at a high enough level, the switch is closed, whereas when the water level is too low, the switch is opened. It will be implemented that if the plants require water, but the water level is too low, the pump will not run, as this would just be a waste of power. Much more specific details as to how the equipment discussed functions as well as how it works can be seen in the Methods and Procedures section. 
 
 \textbf{System 1 under test:} \\
 The first system under test was constructed in order to verify that the float switch worked correctly. There will be one float switch that will monitor the water level in the water chamber. Since it is a switch, when the water in the chamber is at or above it, full contact is made. When the water falls below it, however, the switch will no longer be closed and the circuit will be open. As a result, no current will flow and the micro-controller will be notified and respond by disabling the water pump. In order to ensure that the float switch functioned properly, the following test was constructed and executed. \\
@@ -116,7 +114,25 @@ This code loads the incoming humidity and temperature readings to two different 
 
 % Laboratory experimental results
 \section{Laboratory Experimental Results}
-The experimental results are the data and information yielded during the experiment. Although experimental results should be clearly stated in verbal form, also include and refer to tables, charts, graphs, pictures, or calculations that further strengthen your findings. Remember to number, label and call out each of your table, charts, pictures, graphs or other form of representative information in your verbal discussions! A clear statement drawing attention to the experimental results will help readers interpret any figures, tables or graphs. Do not include all of your raw data in this section. Extract important data items and place the remaining data items in an appendix. Remember to reference any appendices as necessary. State results in clear language and in past tense. 
+
+The first image depicting the work completed thus far can be found in the appendices section and is labeled figure 2. This is the prototype flow chart for the product, showing what sensors and switches will be used, how they will be processed, and what they will activate as a response. It can be seen through the dots in the CPU that the temperature and humidity is related, as they are sensed on the same hardware, but different results will occur depending on the situation. Too hot or humid will result in the fan being activated, while too cold with result in the heater being turned on. The soil moister and the water level are also connected, as they will result in the irrigation system being implemented. Finally, the light sensor will result in activating the LEDs. 
+
+
+\begin{center}
+ \begin{tabular}{||c c c||} 
+ \hline
+
+ Group Member & Device Tested  & Working vs Broken \\ [0.5ex] 
+ \hline\hline
+ Ryan & Float Switch & Working  \\ 
+ \hline
+ Adam & DHT22 & Working  \\
+ \hline
+ James & Photoresistor & Working  \\
+  \hline
+ \end{tabular}
+\end{center}
+\caption\centering{  Table 1: Breakout Table}
 
 % Discussion
 \section{Discussion}
