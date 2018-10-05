@@ -118,21 +118,22 @@ This code loads the incoming humidity and temperature readings to two different 
 The first image depicting the work completed thus far can be found in the appendices section and is labeled figure 2. This is the prototype flow chart for the product, showing what sensors and switches will be used, how they will be processed, and what they will activate as a response. It can be seen through the dots in the CPU that the temperature and humidity is related, as they are sensed on the same hardware, but different results will occur depending on the situation. Too hot or humid will result in the fan being activated, while too cold with result in the heater being turned on. The soil moister and the water level are also connected, as they will result in the irrigation system being implemented. Finally, the light sensor will result in activating the LEDs. 
 
 
-\begin{center}
- \begin{tabular}{||c c c||} 
- \hline
-
- Group Member & Device Tested  & Working vs Broken \\ [0.5ex] 
- \hline\hline
- Ryan & Float Switch & Working  \\ 
- \hline
- Adam & DHT22 & Working  \\
- \hline
- James & Photoresistor & Working  \\
-  \hline
- \end{tabular}
-\end{center}
-\caption\centering{  Table 1: Breakout Table}
+\begin{table} [h!]
+    \centering
+    \begin{tabular}{||c c c||} 
+    \hline
+    Group Member & Device Tested  & Working vs Broken \\ [0.5ex] 
+    \hline\hline
+    Ryan & Float Switch & Working  \\ 
+    \hline
+    Adam & DHT22 & Working  \\
+    \hline
+    James & Photoresistor & Working  \\
+    \hline
+    \end{tabular}
+\caption{Table to test captions and labels}
+\label{table:1}
+\end{table}
 
 \indent For the humidity and temperature sensor an output module was set inside of the Arduino code to allow for visible functionality. This section of code does not appear in the code for the sensor in the Methods and Procedures section. However, the output is merely printing to the serial output a series of different strings with the temperature and humidity variables. Below is the working output of the code.
 
