@@ -134,6 +134,17 @@ The first image depicting the work completed thus far can be found in the append
 \end{center}
 \caption\centering{  Table 1: Breakout Table}
 
+\indent For the humidity and temperature sensor an output module was set inside of the Arduino code to allow for visible functionality. This section of code does not appear in the code for the sensor in the Methods and Procedures section. However, the output is merely printing to the serial output a series of different strings with the temperature and humidity variables. Below is the working output of the code.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{DHT22-Output.PNG}
+    \caption{DHT22 Serial Output Monitor}
+    \label{fig:my_label}
+\end{figure}
+
+\indent This output shows desired results, as the room the test was produced in did have a current temperature of 80 degrees Fahrenheit. Although there was no comparison to be made, the humidity output seemed logical. Thus, the device and code were dubbed as working.
+
 % Discussion
 \section{Discussion}
 The discussion presents an interpretation of the data and \underline{\textbf{is the most important part}}, demonstrating the experimenter(s) understanding of the experiment and related concepts. The purpose of the discussion section is to explain, analyze, and interpret experimental findings. The significance or meaning of the experimental results should be communicated. Focus this section as appropriate by: comparing expected results with actual results, analyzing experimental error, explaining results in terms of theoretical issues, relating results to the experimental objectives, comparing results to similar investigations, and analyzing the strengths and limitation of the experimental design. Tip: Summarize the experimental steps or tests in an experimental or test matrix and document the degree to which the experiment achieved/failed its goals.
