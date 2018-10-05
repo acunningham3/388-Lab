@@ -85,6 +85,29 @@ The float switch was tested using the following components:
 \textbf{System 1 Test Procedure}
 The test was performed by first connecting each of the two copper wires from the float switch were connected to two separate wires. This was done because the copper wires could not fit into the bread board on their own. Next, 5 V was supplied from the Arduino Uno and connected to one of the wires from the float switch. Then, the other wire from the float switch was connected to a 2k Ohm resistor. The resistor was then connected to the positive terminal of the LED and the negative side was connected to ground. Once the circuit was completed, the float switch was closed and the LED lit up.
 
+\noindent{\textbf{System 3 Test Setup:} \\
+This next testing session tests the reliability and integrity of the supplied humidity and temperature sensor. The given sensor, or the DHT22, has the ability to detect the percentage of humidity and the temperature of the air around it. This test is to ensure that the implementation created in the Arduino IDE works correctly and creates logically outputs. As well as to test the functionality of the device.\\
+
+\noindent{\textbf{System 3 Test Setup:}
+The DHT22 was tested using the following components:}
+\begin{itemize}
+    \item Humidity and Temperature Sensor (DHT22)
+    \item Arduino Uno R3 Micro-Controller
+    \item 10k Ohm Resistor
+\end{itemize}
+
+\noindent\textbf{System 3 Test Procedure:} \\
+The DHT22 was thoroughly tested using a breadboard and an Arduino UNO R3 to provide 5 volts to in the VCC pin. The second PWM pin is connected to the data line of the DHT22. Ground is connected to ground. A pinout for the DHT22 can be found in the Appendix. Below is the a section of the code implementation for the testing. 
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{DHT22-Code.PNG}
+    \caption{DHT22 Code Implementation}
+    \label{fig:my_label}
+\end{figure}
+
+This code loads the incoming humidity and temperature readings to two different variables, h and f. The code iterates this loop every 1 second for a reliable output of readings. The output monitor for this section can be found in the Laboratory Experimental Results.
+
 % Laboratory experimental results
 \section{Laboratory Experimental Results}
 The experimental results are the data and information yielded during the experiment. Although experimental results should be clearly stated in verbal form, also include and refer to tables, charts, graphs, pictures, or calculations that further strengthen your findings. Remember to number, label and call out each of your table, charts, pictures, graphs or other form of representative information in your verbal discussions! A clear statement drawing attention to the experimental results will help readers interpret any figures, tables or graphs. Do not include all of your raw data in this section. Extract important data items and place the remaining data items in an appendix. Remember to reference any appendices as necessary. State results in clear language and in past tense. 
