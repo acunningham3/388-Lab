@@ -157,6 +157,15 @@ Appropriately document any textual research, fieldwork, and primary sources (int
 
 % Appendices
 \section{Appendices}
-The appendices include any data, calculations, graphs, pictures, or tables that were not included in the report. Each item should be contained in a separate appendix. Remember, if an appendix is included, it must be referenced in the report at least once. 
+\section{Appendix}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[height=250, width=350]{Lab-2-Flow.png}
+    \caption{Prototyping Flowchart}
+    
+    \includegraphics[height=300, width=300]{DHT22-Picture.jpg}
+    \caption{DHT22 Hardwiring From Arduino}
+    
+\end{figure}
 
 \end{document}
