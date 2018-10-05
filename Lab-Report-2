@@ -53,52 +53,152 @@
 %Abstract formatting
 \setlength{\parindent}{0.5in}
 \linespread{1.25}\selectfont\normalsize\noindent
-\tab The Abstract should be indented an additional half an inch on both sides of the paragraph from the margins, and should be at the top of the first page after the table on contents, and before the introduction. 
-
-The abstract is typically one paragraph (200- words) that summarizes the purpose of the report, the methods employed, the key findings, and the significance or major conclusions. This section should include concise statements and contain specific information. 
+\tab The automated greenhouse plant management system is an embedded system utilized by consumers to ensure the well-being and development of all plants in a greenhouse without any  oversight or labor  required. There are many aspects to consider while creating this product, and it is important to layout its overall functions.
+\tab This report summarizes how the product operates, along with providing all work completed thus far and how it was partitioned among group members. Future plans for the project have been included in an attempt to dictate the direction in which it is going.The equipment testing has been documented, as well as the prototyping and test plans.
 \end{abstract}
 
 % Introduction
 \section{Introduction}
-The introduction should include the purpose (what was tested), problem (why was the experiment conducted), and scope (what was analyzed) of the report. In addition, introductions can sometimes include justification of the experiment’s importance. It can also refer to relevant theory and important previous studies. The goal is to supply sufficient background for readers to understand and evaluate the experiment and its results without having to read previous publications.
+The automated greenhouse plant management system will be able to acquire a multitude of inputs from the surrounding environment and respond to them with the correct course of action in a timely manner. To fully understand the extent as to how the product should function, it is important to provide details as to how the average greenhouse works to properly shelter plants for successful growth and development. When the temperature in a greenhouse gets too high for the plants, typically a window is opened to cool the room down. For the automated greenhouse system, an exhaust fan will be implemented to go off when the temperature is sensed to be too high or humid. On the contrary, when the temperature is sensed to be too cold, a heat system must be implemented in a greenhouse to prevent the plants from getting frigid. For the product, a heater will be placed on the wall of the greenhouse that will be activated when temperature is sensed to be too cold. Furthermore, lighting is an essential part to plant life in a greenhouse environment. Without proper lighting, plants will wither up and perish. This product will function by providing light to the plants the same way many large-scale real life greenhouses do: through use of LEDs. When it is sensed that it is too dark in the greenhouse, the product will turn on an LED strip that will be located along the ceiling of the greenhouse. This of course will include cloudy days when there is not enough sun, as well as when it is night time and dark outside. Another important aspect to counter in is whether or not a plant has enough water it its soil. In a typical greenhouse, many gardeners will just manually water the plants. With the product, however, user labor is not required, so there must be an irrigation system implemented This will consist of soil moister sensors for the plants under test, where when moisture is sensed to be too low, a pump is used to send water directly into the plant's pot. Once the sensor indicates that a sufficient moisture level has been met, the pump will cease all water movement. The use of an irrigation system of course requires a water source, which must also be monitored. This will be done with use of a float switch. When the water is at a high enough level, the switch is closed, whereas when the water level is too low, the switch is opened. It will be implemented that if the plants require water, but the water level is too low, the pump will not run, as this would just be a waste of power. Much more specific details as to how the equipment discussed functions as well as how it works can be seen in the Methods and Procedures section. 
+
+\textbf{System 1 under test:} \\
+The first system under test was constructed in order to verify that the float switch worked correctly. There will be one float switch that will monitor the water level in the water chamber. Since it is a switch, when the water in the chamber is at or above it, full contact is made. When the water falls below it, however, the switch will no longer be closed and the circuit will be open. As a result, no current will flow and the micro-controller will be notified and respond by disabling the water pump. In order to ensure that the float switch functioned properly, the following test was constructed and executed. \\
+
+\noindent{\textbf{System 1 Test Setup:} 
+The float switch was tested using the following components:}
+\begin{itemize}
+\item Float Switch (RSF83Y)
+\item 5 V power supply (from Arduino Uno R3 micro-controller)
+\item LED (light emitting diode)
+\item 2k Ohm Resistor
+\item 4 Wires
+\end{itemize}
+\textbf{System 1 Test Procedure:}
+The test was performed by first connecting each of the two copper wires from the float switch to two separate wires. This was done because the copper wires could not fit into the bread board on their own. Next, 5 volts was supplied from the Arduino Uno and connected to one of the wires from the float switch. Then, the other wire from the float switch was connected to a 2k Ohm resistor. The resistor was then connected to the positive terminal of the LED and the negative terminal was connected to ground. Once the circuit was completed, the float switch was closed and the LED lit up. Next the LED was closed and the LED turned off. \\
+\\
+\noindent\textbf{System 2 Under Test:} \\The second system under test was constructed in order confirm that the photoresistor worked properly. The photoresistor will be used to monitor the amount of sunlight inside of the green house. When light is present, the resistor has a lower resistance and as the light decreases, the resistance increases. The the voltage will change as a result of the resistance increasing or decreasing  due to Ohms's Law and the micro-controller will monitor these changes and enable LEDS when there isn't enough sunlight present. The following test was orchestrated in order to ensure that the photoresistor was functioning properly. (See appendix for pictures of the test conducted)\\
 
 
-% Methods and Procedures
-% Description of system under test (what is being tested)
-% Description of test setup (what are you testing the SUT with)
-% Description of Test procedures (How is the test performed) 
-% Description of individual tests (e.g. Test Matrix)
-\section{Methods and Procedures}
-%This section describes and demonstrates in detail the Methods, Results, and Discussion generated by the report
-The methods section should include a description of the apparatus or equipment used (e.g. the test or experimental setup), a description of the system under test (SUT), and a description of the process or procedures (e.g. what tests are to be performed typically represented in a test matrix and how the tests are to be done) to be followed in chronological order to meet validation/verification requirements of a SUT.  This section should include enough detail so that another researcher could duplicate the experiment (tables, graphs, diagrams, pictures, measurement outputs in appropriate formats, spreadsheets, test matrices should be included). Also include any calculations used to conduct the experiment.
+\noindent{\textbf{System 2 Test Setup: }} The photoresistor was tested using the following components:
+
+\begin{itemize}
+\item Photoresistor
+\item 5 V power supply (from Arduino Uno R3 micro-controller)
+\item LED(light emitting diode)
+\item 2 Wires
+\end{itemize}
+
+\noindent\textbf{System 2 Test Procedure:} \\ The test was performed by first connecting 5 volts from the Arduino Uno to the photoresistor. Next, the photoresistor was connected to the positive terminal of the LED. The negative terminal of the LED was then connected to ground. Once the circuit was completed, a finger was used to cover the top of the photoresistor. When this happened, the LED dimmed because the resistance increased. Next the photoresitor was uncovered and the birghtness of the LED increased. (See appendix for pictures of the test conducted)
+\noindent{\textbf{System 3 Test Setup:} \\
+This next testing session tests the reliability and integrity of the supplied humidity and temperature sensor. The given sensor, or the DHT22, has the ability to detect the percentage of humidity and the temperature of the air around it. This test is to ensure that the implementation created in the Arduino IDE works correctly and creates logically outputs. As well as to test the functionality of the device.\\
+
+\noindent{\textbf{System 3 Test Setup:}
+The DHT22 was tested using the following components:}
+\begin{itemize}
+    \item Humidity and Temperature Sensor (DHT22)
+    \item Arduino Uno R3 Micro-Controller
+    \item 10k Ohm Resistor
+\end{itemize}
+
+\noindent\textbf{System 3 Test Procedure:} \\
+The DHT22 was thoroughly tested using a breadboard and an Arduino UNO R3 to provide 5 volts to in the VCC pin. The second PWM pin is connected to the data line of the DHT22. Ground is connected to ground. A pinout for the DHT22 can be found in the Appendix. Below is the a section of the code implementation for the testing. 
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{DHT22-Code.PNG}
+    \caption{DHT22 Code Implementation}
+    \label{fig:my_label}
+\end{figure}
+
+This code loads the incoming humidity and temperature readings to two different variables, h and f. The code iterates this loop every 1 second for a reliable output of readings. The output monitor for this section can be found in the Laboratory Experimental Results.
 
 % Laboratory experimental results
 \section{Laboratory Experimental Results}
-The experimental results are the data and information yielded during the experiment. Although experimental results should be clearly stated in verbal form, also include and refer to tables, charts, graphs, pictures, or calculations that further strengthen your findings. Remember to number, label and call out each of your table, charts, pictures, graphs or other form of representative information in your verbal discussions! A clear statement drawing attention to the experimental results will help readers interpret any figures, tables or graphs. Do not include all of your raw data in this section. Extract important data items and place the remaining data items in an appendix. Remember to reference any appendices as necessary. State results in clear language and in past tense. 
+
+The first image depicting the work completed thus far can be found in the appendices section and is labeled figure 2. This is the prototype flow chart for the product, showing what sensors and switches will be used, how they will be processed, and what they will activate as a response. It can be seen through the dots in the CPU that the temperature and humidity is related, as they are sensed on the same hardware, but different results will occur depending on the situation. Too hot or humid will result in the fan being activated, while too cold with result in the heater being turned on. The soil moister and the water level are also connected, as they will result in the irrigation system being implemented. Finally, the light sensor will result in activating the LEDs. 
+
+
+\begin{table} [h!]
+    \centering
+    \begin{tabular}{||c c c||} 
+    \hline
+    Group Member & Device Tested  & Working vs Broken \\ [0.5ex] 
+    \hline\hline
+    Ryan & Float Switch & Working  \\ 
+    \hline
+    Adam & DHT22 & Working  \\
+    \hline
+    James & Photoresistor & Working  \\
+    \hline
+    \end{tabular}
+\caption{Table to test captions and labels}
+\label{table:1}
+\end{table}
+
+\indent For the humidity and temperature sensor an output module was set inside of the Arduino code to allow for visible functionality. This section of code does not appear in the code for the sensor in the Methods and Procedures section. However, the output is merely printing to the serial output a series of different strings with the temperature and humidity variables. Below is the working output of the code.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{DHT22-Output.PNG}
+    \caption{DHT22 Serial Output Monitor}
+    \label{fig:my_label}
+\end{figure}
+
+\indent This output shows desired results, as the room the test was produced in did have a current temperature of 80 degrees Fahrenheit. Although there was no comparison to be made, the humidity output seemed logical. Thus, the device and code were dubbed as working.
 
 % Discussion
-\section{Discussion}
-The discussion presents an interpretation of the data and \underline{\textbf{is the most important part}}, demonstrating the experimenter(s) understanding of the experiment and related concepts. The purpose of the discussion section is to explain, analyze, and interpret experimental findings. The significance or meaning of the experimental results should be communicated. Focus this section as appropriate by: comparing expected results with actual results, analyzing experimental error, explaining results in terms of theoretical issues, relating results to the experimental objectives, comparing results to similar investigations, and analyzing the strengths and limitation of the experimental design. Tip: Summarize the experimental steps or tests in an experimental or test matrix and document the degree to which the experiment achieved/failed its goals.
+\section{Discussion}Thus far in the lab, three out of the four sensors/switches for the product have been tested, including the light sensor, the float switch, and the DHT22. All components ended with the same result of functioning correctly, with no issues arising. The photoresistor was tested by connecting it to a 5-volt source and an LED. When the photoresistor was covered, the LED became dimmer, while when it was left uncovered in light, the LED shined with much more brightness. It was concluded that the photoresistor becomes more resistant the darker it is in the room, and less resistant the lighter it is. The change in voltage due to the change in resistance will be captured by the micro-controller, and implemented to either turn the LED strip on the greenhouse ceiling on or off depending on the light capacity present. The DHT22 was tested by connecting its pins to the micro-controller and running a program provided by the Arduino library. The output was a box displaying the current humidity and temperature, which was refreshed every second to stay updated. When heat was applied to the sensor, the temperature successfully rose, and when an exhale of breath was applied, the humidity increased as well. This led to the conclusion that the sensor is working properly and will be implemented in the product to monitor the temperature and humidity in the greenhouse. When the temperature is too high or it is too humid, the micro-controller will sense this, and activate the fan. When it is too cold, the micro-controller will activate the heating system. The last component tested was the float switch. This test consisted of the switch being connected to a circuit that contains a resistor, a 5-volt source, and an LED. When the switch was closed, power could surge through the circuit and the LED was lit. When the switch was open, however, the circuit became open as well and no power could reach the LED. This is useful to the product, as when the water level becomes to low in the chamber, the switch will be opened and the micro-controller will receive this input. The micro-controller will then disable usage of the pump, as to not waste any power when there is no water to deliver. It will also light up an LED to indicate to the user that the chamber does not enough water and needs to be refilled. The remaining component, the soil moisture sensor, will be tested using the following plan: two pots will be set up, one with dry soil and one with wet soil. Each pot will receive a sensor, and the voltage return from each of these sensors will be viewed on the oscilloscope to obtain an accurate reading. When the micro-controller obtains a voltage correlating to dry soil, it will activate the pump to deliver water to the pot containing this soil, to ensure that all plants maintain a sufficient amount of water to maintain proper development. 
 
 % Conclusion
 \section{Conclusion}
-This section presents overall conclusions relating to the original purpose of the laboratory.  List conclusions in order of importance and link them to information in previous sections of the report. The conclusion should include a statement of what is known “for sure.” 
-
-% Recommendations
-\section{Recommendations}
-This section is for any recommendations, including how to improve performance if redesigning the product.  State what actions should be taken based on the results of the study. As well as anything that could be done better in the lab.
+The purpose of this prototyping and testing stage are to gather the components needed to start creating a working model that will perform as intended. Through this lab and the device testing throughout, the students have gathered enough information to prove that each device is working and performs in a nominal fashion. Overall, the humidity and temperature sensor (DHT22), the photoresistor, and the the float switch (RSF38Y) work correctly. The soil moisture sensor will be tested for functionality in the very near future.
 
 % Laboratory reflection
 \section{Laboratory reflection}
-This section differs from the conclusions and recommendations since it is focused on your (or your teams) performance in the design process. You should ask yourself; what did I do well? What did I do poorly? How can I improve upon this performance? What are your specific plans for the next design step? How will you achieve success in this upcoming design step? 
+Although to us, each of these device seemed complex, (especially the ones we have never seen or used before), implementation was rather simple once we searched through each of the data sheets. Unfortunately, we were not able to conduct testing on the VH400 Soil Moisture Sensor, but we plan to in the near future. Once that is done we will then begin implementing each of the devices together and get a working system created. The main aspect in this lab report that slumped our performance was our time management. We should have sectioned off when each of the components should have been testing and should have had a better schedule overall.
 
+We have plans to purchase an LED strip that is compatible with Arduino to use for lighting the plants during the dark, rather than using a small LED bulb. We also plan to go out and buy soil, pots, and plants to use in testing the VH400.
 
 % References 
 \section{References}
-Appropriately document any textual research, fieldwork, and primary sources (interviews, observations, surveys). Use IEEE journal reference formats [5].
+[1] Digitial-Output Relative Humidity and Temperature Sensor/Module AM2303. (n.d.). [ebook] Aosong Electronics Co. Ltd, pp.1-2. Available at:\\ https://www.electroschematics.com/11293/am2302-dht22-datasheet/ [Accessed 3    Oct. 2018]. \\
+
+\noindent[2] RSF80 Series. (2016). [ebook] Cynergy3. Available at:\\ https://www.cynergy3.com/sites/default/files/RSF80\%202016.pdf [Accessed 26 Sep. 2018].
+
+\newpage
 
 % Appendices
 \section{Appendices}
-The appendices include any data, calculations, graphs, pictures, or tables that were not included in the report. Each item should be contained in a separate appendix. Remember, if an appendix is included, it must be referenced in the report at least once. 
+\section{Appendix}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[height=250, width=350]{Lab-2-Flow.png}
+    \caption{Prototyping Flowchart}
+    
+    \includegraphics[height=300, width=300]{DHT22-Picture.jpg}
+    \caption{DHT22 Hardwiring From Arduino}
+    
+\end{figure}
+
+\newpage
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[height=280, width=400]{Float-Switch-1.jpg}
+    \caption{Float Switch Hardwire Testing (Open)}
+    \label{fig:my_label}
+    
+    \includegraphics[height=280, width=400]{Float-Switch-2.jpg}
+    \caption{Float Switch Hardwire Testing (Closed)}
+    \label{fig:my_label}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{Photoresistor.jpg}
+    \caption{Photoresistor Hardwire Testing}
+    \label{fig:my_label}
+\end{figure}
+
 
 \end{document}
