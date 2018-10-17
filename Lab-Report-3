@@ -97,6 +97,9 @@ This next image shows the wiring diagram for this system.\\
     
 \indent Above is the serial monitor outputs for this system. This monitor shows the exact values that the DHT22 is producing. This eases the debugging of the system significantly, as the student can check to see if the code is working in response to different humidity and temperatures.\\
 
+\noindent\textbf{System 2 Under Test:}\\
+The second system under test was constructed in order create a circuit that would turn on the LED when the photoresistor resistor reaches 45 Mega-Ohms. The photoresistor will be used to monitor the amount of sunlight inside of the green house. When light is present, the resistor has a lower resistance, about 3 Mega-Ohms, and as the light decreases, the resistance increases to about 45 Mega-Ohms. The the voltage will change as a result of the resistance increasing or decreasing  due to Ohms's Law and the micro-controller will monitor these changes and enable LEDS when there isn't enough sunlight present. The following test was orchestrated in order to ensure that the LED turned on when there wasnt enough light present. (See appendix for pictures of the test conducted)\\
+
 \noindent{\textbf{System 2 Test Setup: }} The photoresistor was tested using the following components:
 
 \begin{itemize}
@@ -104,11 +107,12 @@ This next image shows the wiring diagram for this system.\\
     \item 5 V power supply (from Arduino Uno R3 micro-controller)
     \item LED (light emitting diode)
     \item 2 Wires
+    \item 10k Ohm resistor
+    \item NPN Transistor (PN2222)
 \end{itemize}
 
 \noindent\textbf{System 2 Test Procedure:}\\
-The test was performed by first connecting 5 volts from the Arduino Uno to the photoresistor. Next, the photoresistor was connected to the positive terminal of the LED. The negative terminal of the LED was then connected to ground. Once the circuit was completed, a finger was used to cover the top of the photoresistor. When this happened, the LED dimmed because the resistance increased. Next the photoresitor was uncovered and the birghtness of the LED increased. (See appendix for pictures of the test conducted) \\
-
+The test was performed by first connecting 5 volts from the Arduino Uno to the 10k Ohm resistor. Next, the 10k Ohm resistor was connected to the collector and to the base of the transistor.  The photoresistor was also connected to the base of the transistor and to the negative terminal of the LED. The positive terminal of the LED was connected to the emitter and the 5 volt source, the photresistor and the LED were all grounded. \\
 \noindent{\textbf{System 3 Test Setup:} \\
 This next testing session tests the reliability and integrity of the supplied humidity and temperature sensor. The given sensor, or the DHT22, has the ability to detect the percentage of humidity and the temperature of the air around it. This test is to ensure that the implementation created in the Arduino IDE works correctly and creates logically outputs. As well as to test the functionality of the device.\\
 
