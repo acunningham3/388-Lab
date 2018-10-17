@@ -79,10 +79,23 @@ The float switch was tested using the following components:}
 \end{itemize}
 
 \noindent\textbf{System 1 Test Procedure:} \\
-The test was performed by first connecting each of the two copper wires from the float switch were connected to two separate wires. This was done because the copper wires could not fit into the bread board on their own. Next, 5 V was supplied from the Arduino Uno and connected to one of the wires from the float switch. Then, the other wire from the float switch was connected to a 2k Ohm resistor. The resistor was then connected to the positive terminal of the LED and the negative side was connected to ground. Once the circuit was completed, the float switch was closed and the LED lit up. \\
+This next image shows the wiring diagram for this system.\\
 
-\noindent\textbf{System 2 Under Test:}\\
-The second system under test was constructed in order confirm that the photoresistor worked properly. The photoresistor will be used to monitor the amount of sunlight inside of the green house. When light is present, the resistor has a lower resistance and as the light decreases, the resistance increases. The the voltage will change as a result of the resistance increasing or decreasing  due to Ohms's Law and the micro-controller will monitor these changes and enable LEDS when there isn't enough sunlight present. The following test was orchestrated in order to ensure that the photoresistor was functioning properly. (See appendix for pictures of the test conducted)\\
+    \begin{figure} [h!]
+        \centering
+        \includegraphics[height = 150, width = 350]{System-1.png}
+        \caption{Wiring diagram for system 1}
+    \end{figure} \\
+    
+\indent As seen, the data output from the DHT22 goes into Pin 2 on the Arduino. This data is read as the inputs f and h for temperature and humidity. Depending on the resulting inputs, the Arduino will drive the several pins connected to the RGB LED high. Although, these pins have the ability to output specific voltages from the user. This can grant the user access to millions of different color combinations to choose from. For now, the code will only output a HIGH or LOW signal to the pins.\\
+
+    \begin{figure} [h!]
+        \centering
+        \includegraphics[width = 200]{System-1-Monitor.png}
+        \caption{DHT22 serial monitor output}
+    \end{figure} \\
+    
+\indent Above is the serial monitor outputs for this system. This monitor shows the exact values that the DHT22 is producing. This eases the debugging of the system significantly, as the student can check to see if the code is working in response to different humidity and temperatures.\\
 
 \noindent{\textbf{System 2 Test Setup: }} The photoresistor was tested using the following components:
 
