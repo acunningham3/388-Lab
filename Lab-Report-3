@@ -64,15 +64,25 @@
 %Methods
 \section{Methods and Procedures}
 \textbf{System 1 Under Test:} \\
-This first system tests the usage of the DHT22. This small sensor easily outputs precise readings for the ambient temperature and humidity. Below is a small section of the Arduino code that controls this sensor. This code snippet stores the temperature and humidity readings from the DHT22 into variables f and h respectively.\\
+This first system tests the usage of the DHT22. This small sensor easily outputs precise readings for the ambient temperature and humidity. Below is a small section of the Arduino code that controls this sensor. This code snippet stores the temperature and humidity readings from the DHT22 into variables f and h respectively.
+
+\pagebreak
 
     \begin{figure} [h!]
         \centering
-        \includegraphics[height = 30, width = 200]{Inputs.png}
-        \caption{Code to set variables h and f to the humidity and temperature}
+        \includegraphics[width = 190]{Inputs.png}
+        \caption{Set variables h and f to the humidity and temperature}
     \end{figure} \\
     
-\indent The main point of this system is to successfully control an LED, Blow Dryer, and Fan using the sensor. Since the final prototype will need to control a red LED to show the user that the greenhouse is too hot or humid. The prototype will also need to start a fan if the greenhouse becomes too hot and a blow dryer if the greenhouse becomes too cold. \\
+\indent The main point of this system is to successfully control an LED, Blow Dryer, and Fan using the sensor. Since the final prototype will need to control a red LED to show the user that the greenhouse is too hot or humid. The prototype will also need to start a fan if the greenhouse becomes too hot and a blow dryer if the greenhouse becomes too cold. Below is a sample of code that shows an if statement that will control the power to the heater and fan.\\
+
+    \begin{figure} [h!]
+        \centering
+        \includegraphics[width = 300]{Code-system-1.png}
+        \caption{Code to control the LEDs, Heater, and Fan}
+    \end{figure} \\
+
+\indent The code takes in the reader from the DHT22 into the variables as defined before. The code will then detect if the temperature and humidity are over 75 degrees and 70 percent. If so then the program will drive the fan pin high and turn on the fan. If the temperature is below 55 degrees and the humidity is below 30 percent then the code will drive the heater pin high and turn on the heater. If any other reading is found then the program will drive every pin low.\\
 
 \noindent{\textbf{System 1 Test Setup:}
 The system was built using these components:}
