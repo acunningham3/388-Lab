@@ -64,17 +64,27 @@
 %Methods
 \section{Methods and Procedures}
 \textbf{System 1 Under Test:} \\
-The first system under test was constructed in order to verify that the float switch worked correctly. There will be one float switch that will monitor the water level in the water chamber. Since it is a switch, when the water in the chamber is at or above it, full contact is made. When the water falls below it, however, the switch will no longer be closed and the circuit will be open. As a result, no current will flow and the micro-controller will be notified and respond by disabling the water pump. In order to ensure that the float switch functioned properly, the following test was constructed and executed. \\
+This first system tests the usage of the DHT22. This small sensor easily outputs precise readings for the ambient temperature and humidity. Below is a small section of the Arduino code that controls this sensor. This code snippet stores the temperature and humidity readings from the DHT22 into variables f and h respectively.\\
+
+    \begin{figure} [h!]
+        \centering
+        \includegraphics[height = 30, width = 200]{Inputs.png}
+        \caption{Code to set variables h and f to the humidity and temperature}
+    \end{figure} \\
+    
+\indent The main point of this system is to successfully control an LED, Blow Dryer, and Fan using the sensor. Since the final prototype will need to control a red LED to show the user that the greenhouse is too hot or humid. The prototype will also need to start a fan if the greenhouse becomes too hot and a blow dryer if the greenhouse becomes too cold. \\
 
 \noindent{\textbf{System 1 Test Setup:}
-The float switch was tested using the following components:}
+The system was built using these components:}
 \begin{itemize}
-    \item float switch
-    \item 5 V power supply (from Arduino Uno micro-controller)
-    \item LED (light emitting diode)
-    \item 2k Ohm resistor
-    \item 4 wires
-\end{itemize}
+    \item DHT22
+    \item Arduino Micro-controller
+    \item RGB LED
+    \item Fan
+    \item Blow Dryer
+    \item 3x 220 Ohm Resistors
+    \item 10k Ohm Resistor
+\end{itemize} \\
 
 \noindent\textbf{System 1 Test Procedure:} \\
 This next image shows the wiring diagram for this system.\\
@@ -86,6 +96,7 @@ This next image shows the wiring diagram for this system.\\
     \end{figure} \\
     
 \indent As seen, the data output from the DHT22 goes into Pin 2 on the Arduino. This data is read as the inputs f and h for temperature and humidity. Depending on the resulting inputs, the Arduino will drive the several pins connected to the RGB LED high. Although, these pins have the ability to output specific voltages from the user. This can grant the user access to millions of different color combinations to choose from. For now, the code will only output a HIGH or LOW signal to the pins.\\
+\indent This wiring diagram also shows a fan and a blow dryer that are attached to the Arduino. This fan is activated whenever the temperature readings become higher than 75 degrees. The blow dryer is activated whenever the temperature becomes lower than 55 degrees.\\
 
     \begin{figure} [h!]
         \centering
@@ -93,7 +104,7 @@ This next image shows the wiring diagram for this system.\\
         \caption{DHT22 serial monitor output}
     \end{figure} \\
     
-\indent Above is the serial monitor outputs for this system. This monitor shows the exact values that the DHT22 is producing. This eases the debugging of the system significantly, as the student can check to see if the code is working in response to different humidity and temperatures.\\
+\indent Above is the serial monitor outputs for this system. This monitor shows the exact values that the DHT22 is producing. This eases the debugging of the system significantly, as the students can check to see if the code is working in response to different humidity and temperatures.\\
 
 \noindent\textbf{System 2 Under Test:}\\
 The second system under test was constructed in order create a circuit that would turn on the LED when the photoresistor resistor reaches 45 Mega-Ohms. The photoresistor will be used to monitor the amount of sunlight inside of the green house. When light is present, the resistor has a lower resistance, about 3 Mega-Ohms, and as the light decreases, the resistance increases to about 45 Mega-Ohms. The the voltage will change as a result of the resistance increasing or decreasing  due to Ohms's Law and the micro-controller will monitor these changes and enable LEDS when there isn't enough sunlight present. The following test was orchestrated in order to ensure that the LED turned on when there wasn't enough light present. (See appendix for pictures of the test conducted)\\
