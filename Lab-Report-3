@@ -214,7 +214,7 @@ This lab report reports the prototyping that this group of students have complet
 \section{Laboratory reflection}
 The main problems that any of us had with this lab was powering the water pump. Unfortunately, the water pump does not function at all without the use of a 12 volt input. The Arduino board that we are using only outputs up to 5 volts on the VCC pins. We needed a 12 volt power adapter to plug into the Arduino board so we could use the VIN pin to output the correct voltage and run the pump. As shown by our testing results in the laboratory reflection.
 We have to try more test and different circuit setups in order to incorporate the soil moisture sensor with the pump aand flaotswitch. This is essential, as the pump should only be active when the soil is lacking moisture.
-
+The heat and humidity sensor was easy to work with once i found a coding library for it. The code allowed the temperature and humidity to be displayed on screen, and then a simple if statement was used to make it work with the led, fan and heat. At first we thought we were going to use an RGB LED but we decided that we only needed 2 LEDs, and this would reduce the number of resistors we needed and also the price.
 % References 
 \section{References}
 [1] “VH400 Soil Moisture Sensor Probes,” Vegetronix. [Online]. Available:\\ https://www.vegetronix.com/Products/VH400/. [Accessed: 06-Oct-2018].
