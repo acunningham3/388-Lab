@@ -131,31 +131,43 @@ This code loads the incoming humidity and temperature readings to two different 
 
 % Laboratory experimental results
 \section{Laboratory Experimental Results}
+\begin{figure} [h!]
+        \centering
+        \includegraphics[width = 350]{Water-Test.PNG}
+        \caption{Test Plan for Water Pump with Results}
+    \end{figure} \\
 
-The first image depicting the work completed thus far can be found in the appendices section and is labeled figure 2. This is the prototype flow chart for the product, showing what sensors and switches will be used, how they will be processed, and what they will activate as a response. It can be seen through the dots in the CPU that the temperature and humidity is related, as they are sensed on the same hardware, but different results will occur depending on the situation. Too hot or humid will result in the fan being activated, while too cold with result in the heater being turned on. The soil moister and the water level are also connected, as they will result in the irrigation system being implemented. Finally, the light sensor will result in activating the LEDs. 
+\begin{figure} [h!]
+        \centering
+        \includegraphics[width = 350]{Temperature.PNG}
+        \caption{Temperature and Humidity System Test Plan With Results}
+    \end{figure} \\
+    
+\begin{figure} [h!]
+        \centering
+        \includegraphics[width = 350]{NewLight.PNG}
+        \caption{}
+    \end{figure} \\
+    
+    
 
 
 \begin{table} [h!]
     \centering
     \begin{tabular}{||c c c||} 
     \hline
-    Group Member & Device Tested  & Working vs Broken \\ [0.5ex] 
+    Group Member & System Completed & Successful vs Failed \\ [0.5ex] 
     \hline\hline
-    Ryan & Float Switch & Working  \\ 
+    Ryan & Light Sensor & Successful  \\ 
     \hline
-    Adam & DHT22 & Working  \\
+    Adam & Irrigation System & Successful  \\
     \hline
-    James & Photoresistor & Working  \\
+    James & Temperature and Humidity System & Successful  \\
     \hline
     \end{tabular}
-\caption{Table to test captions and labels}
+\caption{PARTITIONED WORK}
 \label{table:1}
 \end{table}
-
-\indent For the humidity and temperature sensor an output module was set inside of the Arduino code to allow for visible functionality. This section of code does not appear in the code for the sensor in the Methods and Procedures section. However, the output is merely printing to the serial output a series of different strings with the temperature and humidity variables. Below is the working output of the code.
-
-
-\indent This output shows desired results, as the room the test was produced in did have a current temperature of 80 degrees Fahrenheit. Although there was no comparison to be made, the humidity output seemed logical. Thus, the device and code were dubbed as working.
 
 % Discussion
 \section{Discussion}Thus far in the lab, three out of the four sensors/switches for the product have been tested, including the light sensor, the float switch, and the DHT22. All components ended with the same result of functioning correctly, with no issues arising. The photoresistor was tested by connecting it to a 5-volt source and an LED. When the photoresistor was covered, the LED became dimmer, while when it was left uncovered in light, the LED shined with much more brightness. It was concluded that the photoresistor becomes more resistant the darker it is in the room, and less resistant the lighter it is. The change in voltage due to the change in resistance will be captured by the micro-controller, and implemented to either turn the LED strip on the greenhouse ceiling on or off depending on the light capacity present. The DHT22 was tested by connecting its pins to the micro-controller and running a program provided by the Arduino library. The output was a box displaying the current humidity and temperature, which was refreshed every second to stay updated. When heat was applied to the sensor, the temperature successfully rose, and when an exhale of breath was applied, the humidity increased as well. This led to the conclusion that the sensor is working properly and will be implemented in the product to monitor the temperature and humidity in the greenhouse. When the temperature is too high or it is too humid, the micro-controller will sense this, and activate the fan. When it is too cold, the micro-controller will activate the heating system. The last component tested was the float switch. This test consisted of the switch being connected to a circuit that contains a resistor, a 5-volt source, and an LED. When the switch was closed, power could surge through the circuit and the LED was lit. When the switch was open, however, the circuit became open as well and no power could reach the LED. This is useful to the product, as when the water level becomes to low in the chamber, the switch will be opened and the micro-controller will receive this input. The micro-controller will then disable usage of the pump, as to not waste any power when there is no water to deliver. It will also light up an LED to indicate to the user that the chamber does not enough water and needs to be refilled. The remaining component, the soil moisture sensor, will be tested using the following plan: two pots will be set up, one with dry soil and one with wet soil. Each pot will receive a sensor, and the voltage return from each of these sensors will be viewed on the oscilloscope to obtain an accurate reading. When the micro-controller obtains a voltage correlating to dry soil, it will activate the pump to deliver water to the pot containing this soil, to ensure that all plants maintain a sufficient amount of water to maintain proper development. 
