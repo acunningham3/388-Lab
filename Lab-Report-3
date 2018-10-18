@@ -204,13 +204,11 @@ This code loads the incoming humidity and temperature readings to two different 
 
 % Conclusion
 \section{Conclusion}
-The purpose of this prototyping and testing stage are to gather the components needed to start creating a working model that will perform as intended. Through this lab and the device testing throughout, the students have gathered enough information to prove that each device is working and performs in a nominal fashion. Overall, the humidity and temperature sensor (DHT22), the photoresistor, and the the float switch (RSF38Y) work correctly. The soil moisture sensor will be tested for functionality in the very near future.
+This lab report reports the prototyping that this group of students have completed thus far in the semester. Three systems have been composed, designed, and executed successfully. These systems will then be combined to a completed, working prototype. As the students now know that all the components work and that the executed systems work, designing and implementation a final prototype will be as easy as combining the three systems and the code along with those systems.
 
 % Laboratory reflection
 \section{Laboratory reflection}
-Although to us, each of these device seemed complex, (especially the ones we have never seen or used before), implementation was rather simple once we searched through each of the data sheets. Unfortunately, we were not able to conduct testing on the VH400 Soil Moisture Sensor, but we plan to in the near future. Once that is done we will then begin implementing each of the devices together and get a working system created. The main aspect in this lab report that slumped our performance was our time management. We should have sectioned off when each of the components should have been testing and should have had a better schedule overall.
-
-We have plans to purchase an LED strip that is compatible with Arduino to use for lighting the plants during the dark, rather than using a small LED bulb. We also plan to go out and buy soil, pots, and plants to use in testing the VH400.
+The main problems that any of us had with this lab was powering the water pump. Unfortunately, the water pump does not function at all without the use of a 12 volt input. The Arduino board that we are using only outputs up to 5 volts on the VCC pins. We needed a 12 volt power adapter to plug into the Arduino board so we could use the VIN pin to output the correct voltage and run the pump. As shown by our testing results in the laboratory reflection.
 
 % References 
 \section{References}
