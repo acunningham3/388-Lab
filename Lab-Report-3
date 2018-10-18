@@ -219,4 +219,22 @@ The main problems that any of us had with this lab was powering the water pump. 
 % Appendices
 \section{Appendix}
 
+\begin{figure} [h!]
+    \centering
+    \includegraphics[width = 300]{System-3-Pic.jpg}
+    \caption{System 3 Physical Wiring}
+\end{figure} \\
+
+\begin{figure} [h!]
+    \centering
+    \includegraphics[width = 300]{System-1-Pic1.jpg}
+    \caption{System 1 Physical Wiring - Fan On (Red LED)}
+\end{figure} \\
+
+\begin{figure} [h!]
+    \centering
+    \includegraphics[width = 300]{System-1-Pic2.jpg}
+    \caption{System 3 Physical Wiring - Fan Off (Green LED)}
+\end{figure} \\
+
 \end{document}
