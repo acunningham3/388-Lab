@@ -4,6 +4,7 @@
 \usepackage{times}
 \usepackage{setspace}
 \usepackage{graphicx}
+\usepackage{subfig}
 
 \linespread{1}
 \setlength{\parindent}{0.5in}
@@ -39,7 +40,7 @@
     \large{Ryan McCarthy (rmccarthy3)}\\[20ex]
 \end{tabular}
 
-\date{\Large Submitted: October  2018 \\ \Large Due: October  2018} \\[1.25in]
+\date{\Large Submitted: October 20th 2018 \\ \Large Due: October 20th 2018} \\[1.25in]
 \thispagestyle{empty}
 \end{center} 
 
@@ -128,7 +129,7 @@ The second system under test was constructed in order create a circuit that woul
     \item 5 V power supply (from Arduino Uno R3 micro-controller)
     \item LED (light emitting diode)
     \item 2 Wires
-    \item 10k Ohm resistor
+    \item 10k Ohm Resistor
     \item NPN Transistor (PN2222)
 \end{itemize}
 
