@@ -58,9 +58,11 @@
 \tab The automated greenhouse plant management system is an embedded system utilized by consumers to ensure the well-being and development of all plants in a greenhouse without any  oversight or labor  required. There are many aspects to consider while creating this product, and it is important to layout its overall functions.
 \tab A prototype is an early sample of a product built to test a concept or process or to act as a model to be replicated or learned from. The automated greenhouse has three separate  prototyping models that will be discussed in detail in this report.
 \end{abstract}
+
 % Introduction
 \section{Introduction}
- Three different systems were designed for the purpose of prototyping: an irrigation system, a temperature and humidity sensing system with heating and cooling, and a light sensing system. The irrigation system makes use of a pump, a water source with a switch float, and a soil moisture sensor. After repeated testing of the pump, it was seen that at least 12 volts is needed to drive it's motor and successfully take in and put out water. The pump is intertwined with the float switch and the soil moisture sensor, as it is only activated when the switch is closed, indicating that there is a sufficient amount of water in the source, and when the sensor indicates that moisture is low in the soil. A test plan was made for this system, and its outcome can be seen in the Experimental Results section of the report. The temperature and humidity sensing system with heating and cooling makes use of the DHT22, a fan, and a heater. When the program for the product is run, a serial monitor displays all temperature and relative humidity in the room, updating every two seconds. When the temperature rises above 82 degrees Fahrenheit or the humidity gets above 50 percent, a fan is activated, along with a red LED being turned on. When the temperature falls below 82 degrees Fahrenheit or the humidity falls below 50 percent, a blue LED is turned on and the heater is activated. A test plan with its outcome can again be found in the Experimental Results section. The final prototyping portion of the product is the light sensing system. A circuit was created with the photoresistor, an LED, and transistor. When the resistance in the photoresistor is less than 4 mega ohms, the LED is turned off. When the resistance in the photoresistor reaches above 43 mega ohms, the LED is turned on. This final test plan with its results can be seen in the Experimental Results section. 
+ Three different systems were designed for the purpose of prototyping: an irrigation system, a temperature and humidity sensing system with heating and cooling, and a light sensing system. The irrigation system makes use of a pump, a water source with a switch float, and a soil moisture sensor. After repeated testing of the pump, it was seen that at least 12 volts is needed to drive it's motor and successfully take in and put out water. The pump is intertwined with the float switch and the soil moisture sensor, as it should only be activated when the switch is closed, indicating that there is a sufficient amount of water in the source, and when the sensor indicates that moisture is low in the soil. A test plan was made for this system, and its outcome can be seen in the Experimental Results section of the report. The temperature and humidity sensing system with heating and cooling makes use of the DHT22, a fan, and a heater. When the program for the product is run, a serial monitor displays all temperature and relative humidity in the room, updating every two seconds. When the temperature rises above 82 degrees Fahrenheit or the humidity gets above 50 percent, a fan is activated, along with a red LED being turned on. When the temperature falls below 82 degrees Fahrenheit or the humidity falls below 50 percent, a blue LED is turned on and the heater is activated. A test plan with its outcome can again be found in the Experimental Results section. The final prototyping portion of the product is the light sensing system. A circuit was created with the photoresistor, an LED, and transistor. When the resistance in the photoresistor is less than 4 mega ohms, the LED is turned off. When the resistance in the photoresistor reaches above 43 mega ohms, the LED is turned on. This final test plan with its results can be seen in the Experimental Results section. 
+ the Experimental Results section. 
 %Methods
 \section{Methods and Procedures}
 \textbf{System 1 Under Test:} \\
@@ -160,29 +162,29 @@ This code loads the incoming humidity and temperature readings to two different 
 }
 
 % Laboratory experimental results
-\section{Laboratory Experimental Results}
+\section{Experimental Results}
+
+
 \begin{figure} [h!]
         \centering
-        \includegraphics[width = 350]{Water-Test.PNG}
+        \includegraphics[width = 400]{LilPump.PNG}
         \caption{Test Plan for Water Pump with Results}
     \end{figure} \\
-
+    \pagebreak 
+    
 \begin{figure} [h!]
         \centering
-        \includegraphics[width = 350]{Temperature.PNG}
+        \includegraphics[width = 350]{Temp.PNG}
         \caption{Temperature and Humidity System Test Plan With Results}
     \end{figure} \\
-    
-\begin{figure} [h!]
+    \pagebreak
+    \begin{figure} [h!]
         \centering
-        \includegraphics[width = 350]{NewLight.PNG}
-        \caption{}
+        \includegraphics[width = 350]{Light.PNG}
+        \caption{Test Plan for Light Sensing System with Results}
     \end{figure} \\
     
-    
-
-
-\begin{table} [h!]
+    \begin{table} [h!]
     \centering
     \begin{tabular}{||c c c||} 
     \hline
@@ -198,6 +200,7 @@ This code loads the incoming humidity and temperature readings to two different 
 \caption{PARTITIONED WORK}
 \label{table:1}
 \end{table}
+\pagebreak
 
 % Discussion
 \section{Discussion}Thus far in the lab, three out of the four sensors/switches for the product have been tested, including the light sensor, the float switch, and the DHT22. All components ended with the same result of functioning correctly, with no issues arising. The photoresistor was tested by connecting it to a 5-volt source and an LED. When the photoresistor was covered, the LED became dimmer, while when it was left uncovered in light, the LED shined with much more brightness. It was concluded that the photoresistor becomes more resistant the darker it is in the room, and less resistant the lighter it is. The change in voltage due to the change in resistance will be captured by the micro-controller, and implemented to either turn the LED strip on the greenhouse ceiling on or off depending on the light capacity present. The DHT22 was tested by connecting its pins to the micro-controller and running a program provided by the Arduino library. The output was a box displaying the current humidity and temperature, which was refreshed every second to stay updated. When heat was applied to the sensor, the temperature successfully rose, and when an exhale of breath was applied, the humidity increased as well. This led to the conclusion that the sensor is working properly and will be implemented in the product to monitor the temperature and humidity in the greenhouse. When the temperature is too high or it is too humid, the micro-controller will sense this, and activate the fan. When it is too cold, the micro-controller will activate the heating system. The last component tested was the float switch. This test consisted of the switch being connected to a circuit that contains a resistor, a 5-volt source, and an LED. When the switch was closed, power could surge through the circuit and the LED was lit. When the switch was open, however, the circuit became open as well and no power could reach the LED. This is useful to the product, as when the water level becomes to low in the chamber, the switch will be opened and the micro-controller will receive this input. The micro-controller will then disable usage of the pump, as to not waste any power when there is no water to deliver. It will also light up an LED to indicate to the user that the chamber does not enough water and needs to be refilled. The remaining component, the soil moisture sensor, will be tested using the following plan: two pots will be set up, one with dry soil and one with wet soil. Each pot will receive a sensor, and the voltage return from each of these sensors will be viewed on the oscilloscope to obtain an accurate reading. When the micro-controller obtains a voltage correlating to dry soil, it will activate the pump to deliver water to the pot containing this soil, to ensure that all plants maintain a sufficient amount of water to maintain proper development. 
