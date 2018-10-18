@@ -62,7 +62,7 @@
 % Introduction
 \section{Introduction}
  Three different systems were designed for the purpose of prototyping: an irrigation system, a temperature and humidity sensing system with heating and cooling, and a light sensing system. The irrigation system makes use of a pump, a water source with a switch float, and a soil moisture sensor. After repeated testing of the pump, it was seen that at least 12 volts is needed to drive it's motor and successfully take in and put out water. The pump is intertwined with the float switch and the soil moisture sensor, as it should only be activated when the switch is closed, indicating that there is a sufficient amount of water in the source, and when the sensor indicates that moisture is low in the soil. A test plan was made for this system, and its outcome can be seen in the Experimental Results section of the report. The temperature and humidity sensing system with heating and cooling makes use of the DHT22, a fan, and a heater. When the program for the product is run, a serial monitor displays all temperature and relative humidity in the room, updating every two seconds. When the temperature rises above 82 degrees Fahrenheit or the humidity gets above 50 percent, a fan is activated, along with a red LED being turned on. When the temperature falls below 82 degrees Fahrenheit or the humidity falls below 50 percent, a blue LED is turned on and the heater is activated. A test plan with its outcome can again be found in the Experimental Results section. The final prototyping portion of the product is the light sensing system. A circuit was created with the photoresistor, an LED, and transistor. When the resistance in the photoresistor is less than 4 mega ohms, the LED is turned off. When the resistance in the photoresistor reaches above 43 mega ohms, the LED is turned on. This final test plan with its results can be seen in the Experimental Results section. 
- the Experimental Results section. 
+ 
 %Methods
 \section{Methods and Procedures}
 \textbf{System 1 Under Test:} \\
@@ -116,7 +116,7 @@ This next image shows the wiring diagram for this system.\\
         \caption{DHT22 serial monitor output}
     \end{figure} \\
     
-\indent Above is the serial monitor outputs for this system. This monitor shows the exact values that the DHT22 is producing. This eases the debugging of the system significantly, as the students can check to see if the code is working in response to different humidity and temperatures.\\
+\indent Above is the serial monitor outputs for this system. This monitor shows the exact values that the DHT22 is producing. This eases the debugging of the system significantly, as the students can check to see if the code is working in response to different humidity and temperatures. Physical representations for this system can be found in the Appendix of this lab report.\\
 
 \noindent\textbf{System 2 Under Test:}\\
 The second system under test was constructed in order create a circuit that would turn on the LED when the photoresistor resistor reaches 45 Mega-Ohms. The photoresistor will be used to monitor the amount of sunlight inside of the green house. When light is present, the resistor has a lower resistance, about 3 Mega-Ohms, and as the light decreases, the resistance increases to about 45 Mega-Ohms. The the voltage will change as a result of the resistance increasing or decreasing  due to Ohms's Law and the micro-controller will monitor these changes and enable LEDS when there isn't enough sunlight present. The following test was orchestrated in order to ensure that the LED turned on when there wasn't enough light present. (See appendix for pictures of the test conducted)\\
@@ -135,32 +135,52 @@ The second system under test was constructed in order create a circuit that woul
 \noindent\textbf{System 2 Test Procedure:}\\
 The test was performed by first connecting 5 volts from the Arduino Uno to the 10k Ohm resistor. Next, the 10k Ohm resistor was connected to the collector and to the base of the transistor.  The photoresistor was also connected to the base of the transistor and to the negative terminal of the LED. The positive terminal of the LED was connected to the emitter and the 5 volt source, the photresistor and the LED were all grounded. \\
 
+    \begin{figure}[h!]%
+        \centering
+        \subfloat[The photoresistor is covered]{{\includegraphics[height = 90, width=5cm]{light-led.jpg} }}%
+        \qquad
+        \subfloat[The photoresistor is not covered]{{\includegraphics[width=5cm]{dark-led.jpg} }}%
+        \caption{Functioning photoresistor}%
+        \label{fig:example}%
+    \end{figure}
+    
+\noindent{\textbf{System 3 Under Test:} \\
+The final test for this prototyping is the water pump. The goal in this section is to have the water pump activate according to the inputs. Below is a flowchart of the desired functionality of the system.\\
+
     \begin{figure} [h!]
         \centering
-        \includegraphics[height = 100, width = 200]{dark-led.jpg}
-        \includegraphics[height = 100, width = 200]{light-led.jpg}
-        \caption{Photoresistor is Not Covered}
-        \caption{Photoresistor is Covered}
-    \end{figure} 
+        \includegraphics[width = 200]{Flowchart.png}
+        \caption{System 3 flowchart}
+    \end{figure} \\
     
-\noindent{\textbf{System 3 Test Setup:} \\
-This next testing session tests the reliability and integrity of the supplied humidity and temperature sensor. The given sensor, or the DHT22, has the ability to detect the percentage of humidity and the temperature of the air around it. This test is to ensure that the implementation created in the Arduino IDE works correctly and creates logically outputs. As well as to test the functionality of the device.\\
+\indent The VH400 in the diagram above refers to the soil moisture sensor. This sensor will take in a percentage of moisture, and if this percentage of moisture is too low then the program will run the motor. However, the in line float switch has the ability to keep the motor from running if the switch is not activated.\\
 
 \noindent{\textbf{System 3 Test Setup:}
-The DHT22 was tested using the following components:}
+This system includes the following components:}
 \begin{itemize}
-    \item Humidity and Temperature Sensor (DHT22)
-    \item Arduino Uno R3 Micro-Controller
-    \item 10k Ohm Resistor
+    \item VH400 Soil Moisture Sensor
+    \item 2x 220 Ohm Resistors
+    \item 2N2222 Transistor
+    \item Green LED
+    \item Water Pump
+    \item Float Switch
 \end{itemize}
 
 \noindent\textbf{System 3 Test Procedure:} \\
-The DHT22 was thoroughly tested using a breadboard and an Arduino UNO R3 to provide 5 volts to in the VCC pin. The second PWM pin is connected to the data line of the DHT22. Ground is connected to ground. A pinout for the DHT22 can be found in the Appendix. Below is the a section of the code implementation for the testing. 
+This system requires the use of a 12v power module to supply the needed voltage to the water pump. Anything less than 12 volts will not allow the motor in the pump to run. This 12v adapter can easily be plugged into the Arduino, then using the VIN pin the Arduino can output 12v to the water pump.\\
+\indent Another special aspect of the system is the VH400 soil moisture sensor. Currently, this sensor is not able to output useful readings as the students do not have soil to stick the device into. Thus, the code will disregard any reading from the device and instead immediately active the water pump. Below is a simple schematic of the wiring done for this system.\\
 
+\pagebreak
 
-This code loads the incoming humidity and temperature readings to two different variables, h and f. The code iterates this loop every 1 second for a reliable output of readings. The output monitor for this section can be found in the Laboratory Experimental Results.
+\begin{figure} [h!]
+    \centering
+    \includegraphics[width = 300]{System-3.png}
+    \caption{System 3 flowchart}
+\end{figure} \\
+
+\indent Theoretically, this system starts with the soil moisture sensor, but, as said previously, this sensor is not deemed functional yet. The VH400 will send an input from its data line to pin 8 on the Arduino. Arduino will compare the input in an if statement. If the moisture percentage is too low then the Arduino will send a high signal from the Analog 0 (A0) pin to the base of the transistor. This will activate the transistor and send a ground signal to the ground on the water pump. Then, if the float switch is allowing pass through of the 5v signal then the pump will run. The green LED will also light; in the future, this will signify that the water reservoir is ready to supply water. A picture showing the breaboarding for this system can be found in the Appendix of this lab report.
 }
-
+\pagebreak
 % Laboratory experimental results
 \section{Experimental Results}
 
@@ -217,7 +237,8 @@ We have to try more test and different circuit setups in order to incorporate th
 The heat and humidity sensor was easy to work with once i found a coding library for it. The code allowed the temperature and humidity to be displayed on screen, and then a simple if statement was used to make it work with the led, fan and heat. At first we thought we were going to use an RGB LED but we decided that we only needed 2 LEDs, and this would reduce the number of resistors we needed and also the price.
 % References 
 \section{References}
-[1] “VH400 Soil Moisture Sensor Probes,” Vegetronix. [Online]. Available:\\ https://www.vegetronix.com/Products/VH400/. [Accessed: 06-Oct-2018].
+[1] “VH400 Soil Moisture Sensor Probes,” Vegetronix. [Online]. Available:\\ https://www.vegetronix.com/Products/VH400/. [Accessed: 06-Oct-2018]. \\
+\noindent[2] “Digital-output relative humidity & temperature sensor/module,” Sparkfun. [Online]. Available: https://www.sparkfun.com/datasheets/Sensors/Temperature/DHT22.pdf. [Accessed: 15-Oct-2018].
 
 \newpage
 
