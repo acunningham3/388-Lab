@@ -17,12 +17,14 @@ Create a functional greenhouse managment embedded system
 #include "DHT_U.h"
 
 //Defintions
-#define DHTPIN 2        //DHT22 pin 2
 #define VH400 12        //VH400 pin 12
-#define Drive A0        //Water pump drive pin A0
-#define RED 3
-#define GREEN 5         //Pins for RGB LED
+#define FAN 8           //Fan pin 8
+#define HEAT 7          //Heat pin 7
 #define BLUE 6
+#define GREEN 5         //Pins for RGB LED
+#define RED 3
+#define DHTPIN 2        //DHT22 pin 2
+#define Drive A0        //Water pump drive pin A0
 
 #define DHTTYPE DHT11         //Set type of DHT
 DHT dht(DHTPIN, DHTTYPE);     //Set up DHT
@@ -67,6 +69,8 @@ void setup() {
   pinMode(RED, OUTPUT);
   pinMode(GREEN, OUTPUT);           //Set RGB pins as outputs
   pinMode(BLUE, OUTPUT);
+  pinMode(FAN, OUTPUT);             //Set Fan as output
+  pinMode(HEAT, OUTPUT);            //Set heater as output
   /*-------------------------------------------------------------------------------------------*/
 }
 
@@ -115,18 +119,28 @@ void loop() {
   
   /*Pin drives
   ---------------------------------------------------------------------------------------------*/
-  digitalWrite(Drive, HIGH);
+  if (VH400 > 0)            //If the VH400 is working turn on water pump
+  {
+  digitalWrite(Drive, HIGH);    /*Pump will only turn on if the in line float switch is closed*/
+  }
   
-  if (h > 75 || f > 80)     //If humidity or temp is too high change LED Red
+  if (h > 75 || f > 80)     //If humidity or temp is too high change LED Red and turn on Fan
   {
     digitalWrite(GREEN, LOW);
     digitalWrite(RED, HIGH);
+    digitalWrite(FAN, HIGH);
 
   }
-  else
+  else if (f < 40)          //If the temp is too low then turn on the heater
+  {
+    //digitalWrite(HEAT, HIGH);
+  }
+  else                      //Change LED Green at nominal temp and humidity, turn off fan and heater
   {
     digitalWrite(RED, LOW);
     digitalWrite(GREEN, HIGH);
+    digitalWrite(FAN, LOW);
+    //digitalWrite(HEAT, LOW);
   }
   /*-------------------------------------------------------------------------------------------*/
 
